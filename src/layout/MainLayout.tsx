@@ -15,8 +15,8 @@ const MainLayout = () => {
         }
       );
 
-      const responseData = await response.json();
-      console.log(responseData);
+      // const responseData = await response.json();
+      // console.log(responseData);
 
       if (!response.ok) {
         throw new Error("Internal error occur");
