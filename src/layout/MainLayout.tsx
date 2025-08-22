@@ -7,10 +7,13 @@ const MainLayout = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("https://jlabs-developer-internship-assessment-api.onrender.com/api/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://jlabs-developer-internship-assessment-api.vercel.app/api/auth/logout",
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
 
       const responseData = await response.json();
       console.log(responseData);
@@ -41,7 +44,10 @@ const MainLayout = () => {
           <div>
             {auth.isAuthenticated && (
               <>
-                <button className="text-white hover:underline font-semibold" onClick={handleLogout}>
+                <button
+                  className="text-white hover:underline font-semibold"
+                  onClick={handleLogout}
+                >
                   Logout
                 </button>
               </>

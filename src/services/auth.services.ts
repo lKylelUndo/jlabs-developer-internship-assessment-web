@@ -9,7 +9,7 @@ export const callRegister = async (
 ): Promise<{ response: Response; responseData: any }> => {
   try {
     const response = await fetch(
-      "https://jlabs-developer-internship-assessment-api.onrender.com/api/auth/register",
+      "https://jlabs-developer-internship-assessment-api.vercel.app/api/auth/register",
       {
         method: "POST",
         headers: {
@@ -34,7 +34,7 @@ export const callLogin = async (
 ): Promise<{ response: Response; responseData: any }> => {
   try {
     const response = await fetch(
-      "https://jlabs-developer-internship-assessment-api.onrender.com/api/auth/login",
+      "https://jlabs-developer-internship-assessment-api.vercel.app/api/auth/login",
       {
         method: "POST",
         credentials: "include",
@@ -60,7 +60,7 @@ export const callChangePassword = async (
 ): Promise<{ response: Response; responseData: any }> => {
   try {
     const response = await fetch(
-      `https://jlabs-developer-internship-assessment-api.onrender.com/api/auth/change-password/${userId}`,
+      `https://jlabs-developer-internship-assessment-api.vercel.app/api/auth/change-password/${userId}`,
       {
         method: "PUT",
         credentials: "include",

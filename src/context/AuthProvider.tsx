@@ -27,7 +27,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const verifyUser = async () => {
       try {
         const response = await fetch(
-          "https://jlabs-developer-internship-assessment-api.onrender.com/api/auth/verify-user",
+          "https://jlabs-developer-internship-assessment-api.vercel.app/api/auth/verify-user",
           {
             method: "GET",
             credentials: "include",
