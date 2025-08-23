@@ -1,18 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-
-type AuthType = {
-  userId: string | null;
-  name: string | null;
-  email: string | null;
-  password?: string | null;
-  isAuthenticated: boolean | null;
-};
-
-type AuthContextType = {
-  auth: AuthType;
-  setAuth: React.Dispatch<React.SetStateAction<AuthType>>;
-  loading: boolean;
-};
+import type { AuthContextType, AuthType } from "../types/auth.types";
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
